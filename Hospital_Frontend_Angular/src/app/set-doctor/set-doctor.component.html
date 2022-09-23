@@ -1,0 +1,45 @@
+<div class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="h3 fw-bold text-blue my-4" style="margin-left: 8px;">Doctor Details </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Name</label>
+            <input name="name" [(ngModel)]="doctor.name" name="name" [value]="doctor.name" required="true" type="text"
+              class="form-control" placeholder="Doctor name" style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Specialization</label>
+            <input name="specialist" [(ngModel)]="doctor.specialist" name="specialist" [value]="doctor.specialist"
+              required="true" type="text" class="form-control" placeholder="Enter specialization"
+              style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Age</label>
+            <input name="age" [(ngModel)]="doctor.age" name="age" [value]="doctor.age" required="true" type="number"
+              class="form-control" placeholder="Enter age" style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <label for="gender" style="font-size: 15px;font-weight: bold;">Gender</label>
+            <select id="gender" [(ngModel)]="doctor.gender" [value]="doctor.gender" class="form-control" name="gender"
+              style="font-weight: bold;">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="mb-2" style="padding-bottom: 19px; padding-top: 11px;">
+            <button type="submit" (click)="saveDoctor()" class="btn btn-primary">Enter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

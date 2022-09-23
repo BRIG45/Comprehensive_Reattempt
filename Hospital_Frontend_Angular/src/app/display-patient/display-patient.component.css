@@ -1,0 +1,27 @@
+.form-inline{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bg{
+    background-color: rgb(179, 240, 240);
+    /* background-image: url(https://kdahweb-static.kokilabenhospital.com/kdah-2019/product/1580195985.jpg); */
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:1300px;
+}
+
+.container{
+    position: relative;
+    margin-left: 120px;
+    height: auto;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}

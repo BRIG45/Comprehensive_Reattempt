@@ -1,0 +1,48 @@
+<div class="container" style="background-color: rgb(91, 91, 173);">
+  <form class="form-inline mt-4">
+    <div class="mb-2">
+      <label for="doctor" style="font-weight: bold;font-size: 20px;color: #fff;">Select Doctor</label>
+      <select class="form-control" #docs (click)="displayDoctorInfo(docs.value)">
+        <option *ngFor="let docs of doctor" value="{{docs.id}}" style="font-size: 15px;font-weight: bold;color: crimson;">{{docs.name}}
+        </option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="btn btn-success my-4 " type="submit" (click)="hidetable()" style="font-size: 15px;"><i
+          class="fa fa-search"> </i>
+        Search</button>
+    </div>
+  </form>
+</div>
+<div class="card text-center" style="background-color: rgb(127, 247, 191);">
+  <div class="card-header" style="font-size: 25px; font-weight: bold;color: blue;"> Doctor Details</div>
+  <div class="p-5 text-center" style="height: 355px">
+    <div class="mask">
+      <div class="d-flex justify-content-center align-items-center">
+        <table class="table table-stripped" [hidden]="hidden">
+          <thead>
+            <tr>
+              <th scope="col" style="font-weight:bold; font-size:20px">Doctor Name</th>
+              <th scope="col" style="font-weight:bold; font-size:20px">Gender</th>
+              <th scope="col" style="font-weight:bold; font-size:20px">Doctor Age</th>
+              <th scope="col" style="font-weight:bold; font-size:20px">Specilazition</th>
+              <th scope="col" style="font-weight:bold; font-size:20px">Total Patient Count</th>
+              <th scope="col" style="font-weight:bold; font-size:20px">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color: blue; font-weight: bold; font-size: 20px;">{{doc.name}}</td>
+              <td style="color: blue; font-weight: bold; font-size: 20px;">{{doc.gender}}</td>
+              <td style="color: blue; font-weight: bold; font-size: 20px;">{{doc.age}}</td>
+              <td style="color: blue; font-weight: bold; font-size: 20px;">{{doc.specialist}}</td>
+              <td style="color: blue; font-weight: bold; font-size: 20px;">{{doc.numberOfPatient}}</td>
+              <td>
+                <button (click)="deleteListedDoc(doc.id)" class="btn btn-danger" style="margin-left:10px"
+                  routerLink="doctor/view">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

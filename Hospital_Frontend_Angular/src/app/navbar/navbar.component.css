@@ -1,0 +1,14 @@
+a{
+    font-weight: bolder;
+}
+
+.nav-item{
+    font-size: larger; 
+    font-weight: bolder; 
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.navbar-nav{
+    padding: 5px;
+}

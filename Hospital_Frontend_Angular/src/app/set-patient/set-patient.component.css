@@ -1,0 +1,28 @@
+
+.bg{
+    background-image: url(https://image.cnbcfm.com/api/v1/image/105706709-1548780020816mm4495.jpg?v=1548780197), url(https://www.himss.org/sites/hde/files/media/image/2021/09/02/continuous-monitoring-of-patients-provides-versatile-improved-care-case-studies-1200x630.png);
+    height: auto;
+    background-position: right, left;
+    background-repeat:no-repeat, no-repeat;
+    background-size: 835px 600px, 765px 651px;
+}
+
+.container{
+    position: relative;
+    margin-left: 705px;
+    width: 650px;
+    height: auto;
+    background-color: #f4f5ef6b;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    padding-left:90px; 
+    padding-right: 20px;
+}
+.col-md-4{
+    width: 80%;
+}
+
+.mb-2{
+    padding-bottom: 15px;
+    color: rgb(4, 6, 107);
+}

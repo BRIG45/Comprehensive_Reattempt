@@ -1,0 +1,47 @@
+<div class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="h3 fw-bold text-dark my-4" style="margin-left: 8px;">Patient Details
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Patient Name</label>
+            <input name="name" [(ngModel)]="patient.name" required="true" type="text" class="form-control"
+              placeholder="Patient name" style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Doctor Name</label>
+            <select class="form-control" [(ngModel)]="patient.visitedDoctor" name="name">
+              <option *ngFor="let doctor of doctors" value="{{doctor.id}}" style="font-weight: bold;">{{doctor.name}}
+              </option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Date Of Appointment</label>
+            <input name="field" required="true" [(ngModel)]="patient.dataOfVist" type="date" class="form-control"
+              placeholder="Enter date of admission" style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Age</label>
+            <input name="age" required="true" [(ngModel)]="patient.age" type="number" class="form-control"
+              placeholder="Enter age" style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <label for="" style="font-size: 15px;font-weight: bold;">Prescription</label>
+            <input name="Prescription" [(ngModel)]="patient.prescription" name="prescription" required="true"
+              type="text" class="form-control" placeholder="Enter prescription" style="font-weight: bold;">
+          </div>
+          <div class="mb-2">
+            <button type="submit" (click)="savePatient()" class="btn btn-primary">Enter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
